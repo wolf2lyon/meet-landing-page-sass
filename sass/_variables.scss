@@ -1,0 +1,19 @@
+$colors:(
+    primary:(
+        base: hsl(192,37%,48%),
+        light:hsl(192,90%,77%),
+        half-light:	hsl(192, 54%, 64%)
+    ),
+    secondary:(
+        base: hsl(268,34%,53%),
+        light:hsl(268,100%,86%),
+        half-light:	hsl(268, 55%, 71%)
+    ),
+    neutral:(
+        very-light: hsl(0,0%,98%),
+        light: hsl(240,18%,85%), 
+        base: hsl(240,10%,57%),
+        dark:hsl(240,21%,20%),
+    ),
+
+)

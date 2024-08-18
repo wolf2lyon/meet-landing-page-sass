@@ -1,0 +1,158 @@
+@use "../variables" as v;
+
+$neutral-base: map-get(map-get(v.$colors, neutral), base);
+$primary-base: map-get(map-get(v.$colors, primary), base);
+$secondary-base: map-get(map-get(v.$colors, secondary), base);
+$secondary-light: map-get(map-get(v.$colors, secondary), light);
+$primary-light: map-get(map-get(v.$colors, primary), light);
+$primary-half-light: map-get(map-get(v.$colors, primary), half-light);
+$neutral-very-light: map-get(map-get(v.$colors, neutral), very-light);
+$secondary-half-light: map-get(map-get(v.$colors, secondary), half-light);
+.hero {
+  width: 305px;
+  margin: 0 auto;
+  margin-top: 64px;
+  margin-bottom: 32px;
+  text-align: center;
+  .hero__pictures {
+    position: relative;
+    height: 160px;
+    img {
+      position: absolute;
+      height: 160px;
+      &:nth-child(1) {
+        left: -61px;
+      }
+      &:nth-child(2) {
+        right: -61px;
+      }
+    }
+  }
+  .hero__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 110%;
+    margin-top: 48px;
+  }
+  .hero__description {
+    margin-top: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    color: $neutral-base;
+  }
+  .hero__buttons.button {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    .button__download {
+      border-radius: 29px;
+      padding: 16px 40px;
+      width: 193px;
+      height: 56px;
+      background-color: $primary-base;
+      border: none;
+      font-weight: 900;
+      font-size: 16px;
+      color: $neutral-very-light;
+      &:hover{
+        background-color: $primary-half-light ;
+        cursor: pointer;
+      }
+      .button__download-blue {
+        color: $primary-light;
+      }
+    }
+    .button__more-info {
+      border-radius: 29px;
+      padding: 16px 39px;
+      width: 161px;
+      height: 56px;
+      background-color: $secondary-base;
+      border: none;
+      font-weight: 900;
+      font-size: 16px;
+      color: $neutral-very-light;
+      &:hover{
+        background-color: $secondary-half-light;
+      }
+    }
+  }
+}
+
+/*Hero Tablet*/
+.hero {
+  .hero__pictures--tablet {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .hero__pictures {
+      display: none;
+    }
+    .hero__pictures--tablet {
+      display: block;
+      height: 303px;
+      width: 820px;
+      position: relative;
+      img {
+        position: absolute;
+        right: -5px;
+      }
+    }
+    .hero__title,
+    .hero__buttons.button,
+    .hero__description {
+      width: 448.3px;
+    }
+    .hero__title {
+      margin-top: 72px;
+      font-size: 48px;
+    }
+    .hero__buttons.button {
+      flex-direction: row;
+    }
+  }
+}
+/*Hero Desktop*/
+@media (min-width: 1440px) {
+  .hero {
+    max-width: 1440px;
+    .hero__pictures {
+      display: block;
+      width: 100%;
+      height:  0px;
+      img {
+        position: absolute;
+        height: auto;
+        &:nth-child(1) {
+          left: -16px;
+        }
+        &:nth-child(2) {
+          right: -16px;
+        }
+      }
+    }
+    .hero__pictures--tablet {
+      display: none;
+    }
+    .hero__title{
+      margin-top: 0px;
+      font-size: 64px;
+    }
+    .hero__description{
+      font-size: 18px;
+    }
+  }
+}
