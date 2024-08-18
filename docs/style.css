@@ -312,7 +312,7 @@ nav img {
   padding: 64px 28px;
   position: relative;
   gap: 24px;
-  background: url("../../assets/tablet/image-footer.jpg"); /* Ajusta la opacidad */
+  background: url("./assets/tablet/image-footer.jpg"); /* Ajusta la opacidad */
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -389,7 +389,7 @@ nav img {
     gap: 32px;
     flex-direction: row;
     min-width: 1440px;
-    background: url("../../assets/desktop/image-footer.jpg");
+    background: url("./assets/desktop/image-footer.jpg");
   }
   .footer .footer__background .footer__title {
     text-align: start;
